@@ -11,16 +11,8 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  branch: { type: String, default: "CSE" },
-  section: { type: Number, default: "1" },
-  year: { type: String, default: "First" },
-  campus: { type: String, default: "Main" },
-  rollNumber: { type: String, required: true, unique: true },
+  role: { type: String, default: "Developer" },
   avatar: { type: String, default: "" },
-  phoneNumber: { type: String, default: "" },
-  course: { type: String, default: "B.Tech" },
-  familyincome: { type: String, default: "" },
-  location: { type: String, default: "" },
   testScores: [testScoreSchema]
 }, { timestamps: true });
 

@@ -10,5 +10,6 @@ router.post("/login", loginUser);
 
 // Protected routes
 router.put("/profile", protect, updateProfile);
-router.get("/profile", protect, getUserProfile);
+router.get("/profile", protect, getUserProfile);  // Apply protect middleware here
+
 module.exports = router;

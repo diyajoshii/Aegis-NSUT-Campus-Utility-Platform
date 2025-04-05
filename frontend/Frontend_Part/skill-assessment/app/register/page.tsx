@@ -8,12 +8,6 @@ export default function RegisterPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [branch, setBranch] = useState('CSE');
-  const [section, setSection] = useState(1);
-  const [year, setYear] = useState('First');
-  const [campus, setCampus] = useState('Main');
-  const [rollNumber, setRollNumber] = useState('');
-  const [course, setCourse] = useState('B.Tech');
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -26,7 +20,7 @@ export default function RegisterPage() {
     setLoading(true);
 
     try {
-      const data = await registerUser({ name, email, password, branch, section, year, campus, rollNumber });
+      const data = await registerUser({ name, email, password });
       setSuccess(true);
       setTimeout(() => router.push('/login'), 2000);
     } catch (error) {
@@ -77,97 +71,6 @@ export default function RegisterPage() {
               disabled={loading}
               required
             />
-          </div>
-
-          <div className="space-y-2">
-            <input
-              type="text"
-              value={rollNumber}
-              onChange={(e) => setRollNumber(e.target.value)}
-              placeholder="Roll Number (e.g., 2021UIC3627)"
-              className="w-full p-3 border rounded-md bg-background text-foreground placeholder:text-muted-foreground border-input focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={loading}
-              required
-            />
-          </div>
-
-          <div className="space-y-2">
-            <select
-              value={course}
-              onChange={(e) => setBranch(e.target.value)}
-              className="w-full p-3 border rounded-md bg-background text-foreground border-input focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={loading}
-            >
-              <option value="B.Tech">B.Tech</option>
-              <option value="BBA">BBA</option>
-            </select>
-          </div>
-
-          <div className="space-y-2">
-            <select
-              value={branch}
-              onChange={(e) => setBranch(e.target.value)}
-              className="w-full p-3 border rounded-md bg-background text-foreground border-input focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={loading}
-            >
-              <option value="CSE">CSE</option>
-              <option value="CSAI">CSAI</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-
-            </select>
-          </div>
-
-          <div className="space-y-2">
-            <select
-              value={section}
-              onChange={(e) => setSection(e.target.value)}
-              className="w-full p-3 border rounded-md bg-background text-foreground border-input focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={loading}
-            >
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-            </select>
-          </div>
-
-          <div className="space-y-2">
-            <select
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              className="w-full p-3 border rounded-md bg-background text-foreground border-input focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={loading}
-            >
-              <option value="First">First</option>
-              <option value="Second">Second</option>
-              <option value="Third">Third</option>
-              <option value="Fourth">Fourth</option>
-            </select>
-          </div>
-
-          <div className="space-y-2">
-            <select
-              value={campus}
-              onChange={(e) => setCampus(e.target.value)}
-              className="w-full p-3 border rounded-md bg-background text-foreground border-input focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={loading}
-            >
-              <option value="Main">Main</option>
-              <option value="East">East</option>
-              <option value="West">West</option>
-            </select>
           </div>
 
           <button 
