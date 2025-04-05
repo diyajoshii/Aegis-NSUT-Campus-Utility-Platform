@@ -17,6 +17,7 @@ import { schemes } from "../data/schemes";
 import SchemeApplication from "../SchemeApplication";
 import Link from "next/link";
 import { Bookmarks } from "../types/Bookmarks";
+import { Button } from "@/components/ui/button"; // Import ShadCN Button component
 
 interface Scheme {
   id: number;
@@ -225,21 +226,8 @@ const SchemesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="p-6 max-w-7.5xl mx-auto">
-        <div className="mb-8 flex justify-between items-center">
-          <h1 className="text-3xl font-bold mb-4 text-gray-800">
-            Government Schemes
-          </h1>
-
-          <Link href="/">
-            <button className="flex items-center text-sm text-blue-600 hover:text-blue-800 transition duration-200">
-              <ArrowLeft className="mr-2 h-5 w-5" />
-              Back to Home
-            </button>
-          </Link>
-        </div>
-
+    <div className="min-h-screen bg-background">
+      <div className="p-6 max-w-7xl mx-auto">
         {/* Search Bar with Voice Search */}
         <div className="relative mb-6 max-w-2xl mx-auto flex items-center gap-2">
           <div className="relative flex-1">
@@ -252,7 +240,7 @@ const SchemesPage = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <button
+          <Button
             onClick={startVoiceRecognition}
             className={`p-3 rounded-full ${
               isListening ? "bg-red-500" : "bg-blue-500"
@@ -264,13 +252,13 @@ const SchemesPage = () => {
             ) : (
               <Mic className="h-5 w-5" />
             )}
-          </button>
+          </Button>
         </div>
 
         {/* Category Filters */}
         <div className="flex gap-3 overflow-x-auto pb-4">
           {categories.map((category) => (
-            <button
+            <Button
               key={category}
               className={`px-5 py-2 rounded-full text-sm font-medium transition duration-200 ${
                 selectedCategory === category
@@ -280,7 +268,7 @@ const SchemesPage = () => {
               onClick={() => setSelectedCategory(category)}
             >
               {category}
-            </button>
+            </Button>
           ))}
         </div>
 
@@ -308,7 +296,7 @@ const SchemesPage = () => {
                     </CardTitle>
                     <p className="text-sm text-gray-500">{scheme.category}</p>
                   </div>
-                  <button
+                  <Button
                     onClick={(e) => {
                       e.stopPropagation();
                       handleBookmark(scheme.id);
@@ -322,7 +310,7 @@ const SchemesPage = () => {
                           : "text-gray-400"
                       }`}
                     />
-                  </button>
+                  </Button>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
@@ -355,9 +343,9 @@ const SchemesPage = () => {
                 </div>
 
                 <div className="flex gap-4 mt-6">
-                  <button className="flex-1 bg-blue-600 text-white py-2 rounded-lg font-semibold text-sm hover:bg-blue-700 transition duration-200">
+                  <Button className="flex-1 bg-blue-600 text-white py-2 rounded-lg font-semibold text-sm hover:bg-blue-700 transition duration-200">
                     Check Eligibility
-                  </button>
+                  </Button>
                   <a
                     href={scheme.applicationUrl}
                     target="_blank"

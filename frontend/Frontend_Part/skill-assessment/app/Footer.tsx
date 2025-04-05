@@ -15,12 +15,12 @@ const Footer = () => {
 
           {/* Middle section - Evenidk | Wish I Knew */}
           <div className="text-sm font-medium">
-            Evenidk | Wish I Knew
+            Laziinvestagtr | Wish I Knew
           </div>
 
           {/* Right section - Copyright */}
           <div className="text-sm">
-            &copy; SkillProve AI {new Date().getFullYear()}
+            &copy; Aegis-NSUT {new Date().getFullYear()}
           </div>
         </div>
       </div>
