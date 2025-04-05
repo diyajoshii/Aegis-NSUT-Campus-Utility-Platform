@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 const cardItems = [
   {
     title: "SkillX",
-    description: "Explore skill-based challenges and learning modules.",
+    description: "Engaging skill-based challenges on your own pace at your fingertips.",
     link: "/SkillX",
   },
   {

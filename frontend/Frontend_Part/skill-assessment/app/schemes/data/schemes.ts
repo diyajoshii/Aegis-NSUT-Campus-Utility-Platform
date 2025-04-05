@@ -12,7 +12,7 @@ export const schemes = [
     beneficiaries: "12 lakh+",
     color: "#4F46E5",
     applicationUrl: "https://scholarships.gov.in",
-    pdfUrl: "https://example.com/post-matric-scholarship.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1mqpn9qPqW8UeDS7LsMGV0EczvmQAfRHf/view?usp=drive_link"
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const schemes = [
     beneficiaries: "5 lakh+",
     color: "#059669",
     applicationUrl: "https://scholarships.gov.in",
-    pdfUrl: "https://example.com/pre-matric-minority.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1wIWdLLqV9xl-eKzyDxjJrDeVKUfIQy36/view?usp=drive_link"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const schemes = [
     beneficiaries: "1 lakh+",
     color: "#EF4444",
     applicationUrl: "https://scholarships.gov.in",
-    pdfUrl: "https://example.com/nmms.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1aCITh93tpR5O4zBoesuHZeaHS3mqD0b3/view?usp=sharing"
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ export const schemes = [
     beneficiaries: "2 lakh+",
     color: "#3B82F6",
     applicationUrl: "https://scholarships.gov.in",
-    pdfUrl: "https://example.com/merit-cum-means.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1vvbxubL0zp5DCk8tRpdUK5M7CNXyBW_C/view?usp=drive_link"
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ export const schemes = [
     beneficiaries: "5,000+",
     color: "#EC4899",
     applicationUrl: "https://scholarships.gov.in",
-    pdfUrl: "https://example.com/aicte-pragati.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1Br2OWAuo_7U8Po6Jr3piWOWvh8hiGEi5/view?usp=drive_link"
   },
   {
     id: 6,
@@ -87,7 +87,7 @@ export const schemes = [
     beneficiaries: "1,000+",
     color: "#8B5CF6",
     applicationUrl: "https://scholarships.gov.in",
-    pdfUrl: "https://example.com/aicte-saksham.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1Ctd9rgxjcCj_bKQt04YW__vk0hfq_Ltb/view?usp=drive_link"
   },
   {
     id: 7,
@@ -102,7 +102,7 @@ export const schemes = [
     beneficiaries: "10,000+",
     color: "#06B6D4",
     applicationUrl: "https://online-inspire.gov.in",
-    pdfUrl: "https://example.com/inspire.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1q3Zzmz4G5RPrDStRe8W33lI2ztk1ITFh/view?usp=drive_link"
   },
   {
     id: 8,
@@ -117,7 +117,7 @@ export const schemes = [
     beneficiaries: "Thousands",
     color: "#10B981",
     applicationUrl: "https://kvpy.iisc.ac.in",
-    pdfUrl: "https://example.com/kvpy.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1wmNMY6xp-Ou9C2_nTl2QLjKrlc2c2OG0/view?usp=drive_link"
   },
   {
     id: 9,
@@ -132,6 +132,6 @@ export const schemes = [
     beneficiaries: "Thousands",
     color: "#F59E0B",
     applicationUrl: "https://edistrict.delhigovt.nic.in",
-    pdfUrl: "https://example.com/cm-scholarship-delhi.pdf"
+    pdfUrl: "https://drive.google.com/file/d/1Q7Z9d0PoRIJ5A64SjK0rvFfMeCpWwu8a/view?usp=drive_link"
   }
 ];

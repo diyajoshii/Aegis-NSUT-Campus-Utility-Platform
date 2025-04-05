@@ -11,20 +11,19 @@ const HeroComponent: React.FC = () => {
     {
       title: "SkillX",
       description:
-        "A smart and secure assessment platform that streamlines test-taking with real-time monitoring, AI-driven insights, and an intuitive user experience. Designed for both learners and educators, it ensures fairness, focus, and efficient performance tracking.",
+        "Visualize a secure assessment platform with real-time monitoring. Imagine a streamlined test-taking experience with AI-driven insights.",
       img: "SkillX.png",
       link: "/SkillX",
     },
     {
       title: "ScholarAid",
-      description: `A comprehensive support platform that helps students discover and apply for scholarships, grants, and academic opportunities. With intelligent matching and streamlined application tools, it empowers learners to access the resources they need to thrive.`,
+      description: "Picture a comprehensive platform for discovering scholarships and grants. Envision students easily accessing the resources they need to succeed academically.",
       img: "ScholarAid.png",
       link: "/ScholarAid",
     },
     {
       title: "Reclaimr",
-      description:
-        "An AI-powered solution that helps individuals and institutions recover unclaimed financial assets with ease. By automating searches and simplifying claims, it ensures users can quickly reconnect with what's rightfully theirs.",
+      description: "See an AI-powered solution simplifying the recovery of unclaimed assets. Imagine individuals and institutions effortlessly reconnecting with their lost funds.",
       img: "Reclaimr.png",
       link: "/Reclaimr",
     },
