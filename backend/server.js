@@ -29,6 +29,7 @@ const testRoutes = require("./routes/testRoutes");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tests", testRoutes);
+app.use('/api/bookmarks', require('./routes/bookmarks'));
 
 // Error handling middleware
 app.use((err, req, res, next) => {

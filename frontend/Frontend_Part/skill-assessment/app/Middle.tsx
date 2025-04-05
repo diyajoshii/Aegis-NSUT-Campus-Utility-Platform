@@ -12,14 +12,14 @@ const cardItems = [
     link: "/SkillX",
   },
   {
-    title: "Learn",
+    title: "ScholarAid",
     description: "Access curated resources to boost your knowledge.",
-    link: "/Learn",
+    link: "/ScholarAid",
   },
   {
-    title: "Projects",
+    title: "Reclaimr",
     description: "Discover hands-on projects to build and grow.",
-    link: "/Projects",
+    link: "/Reclaimr",
   },
 ];
 
