@@ -27,11 +27,11 @@ router.get('/', async (req, res) => {
 
 // Add a comment to an item
 router.put('/:id/comment', async (req, res) => {
-  const { user, text } = req.body;
+  const { user, text } = req.body; // Ensure user and text are being sent in the request body
   try {
     const updatedItem = await Item.findByIdAndUpdate(
       req.params.id,
-      { $push: { comments: { user, text } } },
+      { $push: { comments: { user, text } } }, // Push the new comment into the comments array
       { new: true }
     );
     res.status(200).json(updatedItem);

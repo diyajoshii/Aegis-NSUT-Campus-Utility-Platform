@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Comment {
-  user: string; 
+  user: string; // You can replace this with a user reference if you have a user model
   text: string;
   createdAt: Date;
 }
 
 interface Item {
-  id: number;
+  _id: string; // Ensure you have the correct type for the item ID
   title: string;
   description: string;
   category: string;
@@ -25,7 +25,7 @@ const ItemCard: React.FC<{ item: Item }> = ({ item }) => {
   const handleCommentSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the comment to the server
-    await fetch(`/api/items/${item.id}/comment`, {
+    await fetch(`http://localhost:5000/api/items/${item._id}/comment`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
