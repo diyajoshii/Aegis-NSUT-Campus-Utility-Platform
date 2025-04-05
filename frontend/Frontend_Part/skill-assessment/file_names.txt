@@ -1,0 +1,31 @@
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is AE6C-9D1C
+
+ Directory of C:\Paaji\Paaji\Aegis\frontend\Frontend_Part\skill-assessment
+
+06-04-2025  00:36    <DIR>          .
+05-04-2025  22:21    <DIR>          ..
+05-04-2025  22:55                83 .env.local
+05-04-2025  22:21                64 .eslintrc.json
+05-04-2025  22:21               427 .gitignore
+06-04-2025  00:14    <DIR>          .next
+06-04-2025  00:06    <DIR>          app
+05-04-2025  22:21    <DIR>          components
+05-04-2025  22:21               433 components.json
+06-04-2025  00:36                 0 file_names.txt
+05-04-2025  22:21    <DIR>          lib
+05-04-2025  22:42               233 next-env.d.ts
+05-04-2025  22:21               317 next.config.mjs
+06-04-2025  00:13    <DIR>          node_modules
+06-04-2025  00:13           289,220 package-lock.json
+05-04-2025  23:49             1,556 package.json
+05-04-2025  22:21               143 postcss.config.mjs
+05-04-2025  22:21    <DIR>          public
+05-04-2025  22:21             1,486 README.md
+05-04-2025  22:21    <DIR>          scripts
+05-04-2025  22:21             1,719 tailwind.config.ts
+05-04-2025  22:21               819 tsconfig.json
+05-04-2025  22:21    <DIR>          types
+05-04-2025  22:21    <DIR>          utils
+              13 File(s)        296,500 bytes
+              11 Dir(s)  118,811,353,088 bytes free

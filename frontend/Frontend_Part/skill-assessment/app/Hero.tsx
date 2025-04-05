@@ -8,19 +8,19 @@ import "swiper/css/pagination";
 const HeroComponent: React.FC = () => {
   const heroSlides = [
     {
-      title: "heroheader1",
+      title: "SkillX",
       description: "herodesc1",
-      img: "aischeme.png",
+      img: "SkillX.png",
     },
     {
-      title: "heroheader2",
+      title: "ScholarAid",
       description: "herodesc2",
-      img: "datamanagement.png",
+      img: "ScholarAid.png",
     },
     {
-      title: "heroheader3",
+      title: "Reclaimr",
       description: "herodesc3",
-      img: "nithya-avatar.png",
+      img: "Reclaimr.png",
     },
   ];
 

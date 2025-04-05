@@ -25,9 +25,9 @@ const AboutUs: React.FC = () => {
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center ">
             <img
-              src="priya.jpg"
+              src="AegisNsut.png"
               alt="About Us"
               className="w-64 h-auto rounded-xl shadow-lg object-cover"
             />
