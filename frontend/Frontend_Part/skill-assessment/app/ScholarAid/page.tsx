@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button"; 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SchemesPage from '../schemes/page'; 
+import { AIAssistant } from '../components/AIAssistant';
 
 const ScholarAid = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -26,7 +27,7 @@ const ScholarAid = () => {
                     <TabsList className="bg-card flex justify-between items-center">
                         <div className="flex space-x-4">
                             <TabsTrigger value="schemes">Schemes</TabsTrigger>
-                            <TabsTrigger value="ai-assist">AI-Assist</TabsTrigger>
+                            <TabsTrigger value="ai-assist">Pathya</TabsTrigger>
                         </div>
                         {/* Back to Home Button */}
                         <Link href="/" passHref>
@@ -42,8 +43,8 @@ const ScholarAid = () => {
                     <TabsContent value="ai-assist">
                         {/* Content for AI-Assist */}
                         <div className="p-4">
-                            <h2 className="text-xl font-bold">AI-Assist Page Content</h2>
-                            {/* Add your AI-Assist page content here */}
+                            {/* <h2 className="text-xl font-bold">AI-Assist</h2> */}
+                            <AIAssistant /> {/* Render the AIAssistant component here */}
                         </div>
                     </TabsContent>
                 </Tabs>

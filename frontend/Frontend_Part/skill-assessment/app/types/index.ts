@@ -1,4 +1,3 @@
-// digital-seva\app\types\index.ts
 export interface UserProfile {
   _id?: string;
   name?: string;
@@ -22,31 +21,11 @@ export interface UserProfile {
   employmentStatus?: string;
   isGovernmentEmployee?: boolean;
   documents?: string[];
-}
-
-export interface SchemeRecommendation {
-  name: string;
-  type: 'central' | 'state';
-  description: string;
-  eligibility: string;
-  benefits: string;
-  documents: string[];
-  applicationProcess: string;
-  url?: string;
-}
-
-export interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-}
-
-export interface Language {
-  code: string;
-  name: string;
-  nativeName: string;
-}
-
-export interface StateLanguages {
-  [key: string]: Language[];
-  default: Language[];
+  
+  // New fields for college students
+  stateOfResidence?: string;
+  casteCommunity?: string;
+  cgpaOr12Percentage?: number; // Use this for CGPA or 12th percentage
+  familyIncome?: number;
+  isSingleChild?: boolean;
 }

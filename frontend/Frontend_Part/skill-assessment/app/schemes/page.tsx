@@ -296,7 +296,7 @@ const SchemesPage = () => {
                     </CardTitle>
                     <p className="text-sm text-gray-500">{scheme.category}</p>
                   </div>
-                  <Button
+                  <button
                     onClick={(e) => {
                       e.stopPropagation();
                       handleBookmark(scheme.id);
@@ -310,7 +310,7 @@ const SchemesPage = () => {
                           : "text-gray-400"
                       }`}
                     />
-                  </Button>
+                  </button>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
@@ -354,7 +354,7 @@ const SchemesPage = () => {
                   >
                     Apply Now
                   </a>
-                  {scheme.pdfUrl && ( // Check if pdfUrl exists
+                  {scheme.pdfUrl && (
                     <a
                       href={scheme.pdfUrl}
                       target="_blank"
