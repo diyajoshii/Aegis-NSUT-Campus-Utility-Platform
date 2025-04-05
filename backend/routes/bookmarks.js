@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/auth');
+const { protect } = require('../middleware/authMiddleware');
 const Bookmark = require('../models/Bookmark');
-const mongoose = require('mongoose'); // Make sure to import mongoose
+const mongoose = require('mongoose'); 
 
 // Add a bookmark
-router.post('/', auth, async (req, res) => {
+router.post('/', protect, async (req, res) => {
     const { schemeId } = req.body;
 
     // Validate incoming data
@@ -28,7 +28,7 @@ router.post('/', auth, async (req, res) => {
 });
 
 // Get all bookmarks for a user
-router.get('/', auth, async (req, res) => {
+router.get('/', protect, async (req, res) => {
     try {
         const bookmarks = await Bookmark.find({ userId: req.user.id }).populate('schemeId');
         res.json(bookmarks);
@@ -39,8 +39,7 @@ router.get('/', auth, async (req, res) => {
 });
 
 // Remove a bookmark
-// Remove a bookmark
-router.delete('/:id', auth, async (req, res) => {
+router.delete('/:id', protect, async (req, res) => {
     const { id } = req.params;
 
     try {
