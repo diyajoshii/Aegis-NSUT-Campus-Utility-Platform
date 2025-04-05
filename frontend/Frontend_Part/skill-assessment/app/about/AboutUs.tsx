@@ -14,13 +14,9 @@ const AboutUs: React.FC = () => {
               About Our Platform
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-              faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-              mi pretium tellus duis convallis. Tempus leo eu aenean sed diam
-              urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-              egestas. Iaculis massa nisl malesuada lacinia integer nunc
-              posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad
-              litora torquent per conubia nostra inceptos himenaeos.
+            Aegis-NSUT is a student-driven initiative dedicated to reimagining the educational experience through thoughtful, tech-powered solutions. Whether it's fair and focused assessments with SkillX, unlocking opportunities through ScholarAid, or streamlining reimbursements via Reclaimr, our goal is to support students every step of the way. We believe in building tools that are secure, inclusive, and truly helpful—designed with care, backed by insight, and built for impact.
+
+
             </p>
           </div>
 
@@ -29,7 +25,7 @@ const AboutUs: React.FC = () => {
             <img
               src="AegisNsut.png"
               alt="About Us"
-              className="w-64 h-auto rounded-xl shadow-lg object-cover"
+              className="w-64 h-auto rounded-xl shadow-lg object-cover "
             />
           </div>
         </CardContent>

@@ -9,17 +9,19 @@ const HeroComponent: React.FC = () => {
   const heroSlides = [
     {
       title: "SkillX",
-      description: "herodesc1",
+      description:
+        "A smart and secure assessment platform that streamlines test-taking with real-time monitoring, AI-driven insights, and an intuitive user experience. Designed for both learners and educators, it ensures fairness, focus, and efficient performance tracking.",
       img: "SkillX.png",
     },
     {
       title: "ScholarAid",
-      description: "herodesc2",
+      description: `A comprehensive support platform that helps students discover and apply for scholarships, grants, and academic opportunities. With intelligent matching and streamlined application tools, it empowers learners to access the resources they need to thrive.`,
       img: "ScholarAid.png",
     },
     {
       title: "Reclaimr",
-      description: "herodesc3",
+      description:
+        "An AI-powered solution that helps individuals and institutions recover unclaimed financial assets with ease. By automating searches and simplifying claims, it ensures users can quickly reconnect with what's rightfully theirs.",
       img: "Reclaimr.png",
     },
   ];
