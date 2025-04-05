@@ -1,7 +1,8 @@
+//app\SkillX\skill_page.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useAuth } from "./context/authContext";
+import { useAuth } from "../context/authContext";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -30,15 +31,15 @@ import TestDetailsModal from "@/app/test_detail";
 import ProctoredTestComponent from "@/components/ProctoredTestComponent";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Navbar from "./Navbar";
-import ProfilePage from "./ProfilePage";
-import { getUserTestScores } from "../lib/api";
-import TestScoresLineGraph from "../components/TestScoresLineGraph";
-import Dashboard from "./Dashboard";
-import AvailableTests from "./AvailableTests";
-import TestResults from "./TestResults";
-import { useTheme } from "./context/themeContext";
-import Footer from "./Footer";
+import Navbar from "../Navbar";
+import ProfilePage from "../ProfilePage";
+import { getUserTestScores } from "../../lib/api";
+import TestScoresLineGraph from "../../components/TestScoresLineGraph";
+import Dashboard from "../Dashboard";
+import AvailableTests from "../AvailableTests";
+import TestResults from "../TestResults";
+import { useTheme } from "../context/themeContext";
+import Footer from "../Footer";
 
 const availableTests = [
   {
@@ -160,7 +161,7 @@ const mockData = [
   },
 ];
 
-const SkillAssessmentInterface = () => {
+const SkillX = () => {
   const { token } = useAuth();
   const router = useRouter();
   const { theme } = useTheme();
@@ -407,4 +408,4 @@ const SkillAssessmentInterface = () => {
   );
 };
 
-export default SkillAssessmentInterface;
+export default SkillX;

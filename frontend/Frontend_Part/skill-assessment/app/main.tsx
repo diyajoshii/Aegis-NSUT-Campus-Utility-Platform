@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import HeroComponent from './Hero';
+import FeatureCards from './Middle';
+import AboutUs from './about/AboutUs';
+import Footer from './Footer';
 
 const Main = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -17,6 +20,9 @@ const Main = () => {
         mobileMenuOpen={mobileMenuOpen}
       />
       <HeroComponent />
+      <FeatureCards />
+      <AboutUs />
+      <Footer />
     </div>
   );
 };
