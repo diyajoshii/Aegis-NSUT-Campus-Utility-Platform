@@ -48,7 +48,7 @@ export function AIAssistant() {
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Bot className="h-6 w-6 text-blue-600" />
+            <Bot className="h-6 w-6 text-[#89A071]" />
             <span className="text-lg font-semibold">Pathya</span>
           </div>
         </CardTitle>
@@ -60,7 +60,7 @@ export function AIAssistant() {
         {/* Loading Indicator */}
         {isLoading && (
           <div className="flex justify-center items-center py-4">
-            <Loader className="animate-spin h-6 w-6 text-blue-600" />
+            <Loader className="animate-spin h-6 w-6 text-[#89A071]" />
             <span className="ml-2 text-gray-600">Generating recommendations...</span>
           </div>
         )}

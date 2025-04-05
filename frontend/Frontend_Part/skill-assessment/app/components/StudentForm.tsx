@@ -72,7 +72,7 @@ export function StudentForm({ onSubmit }: { onSubmit: (data: UserProfile) => voi
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+        className="w-full bg-[#89A071] text-white py-2 rounded-lg hover:bg-[#8d9c7d] transition duration-200"
       >
         Get Recommendations
       </button>
