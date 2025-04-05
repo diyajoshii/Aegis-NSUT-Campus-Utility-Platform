@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Link from "next/link"; // If you're using Next.js
 
 const HeroComponent: React.FC = () => {
   const heroSlides = [
@@ -12,17 +13,20 @@ const HeroComponent: React.FC = () => {
       description:
         "A smart and secure assessment platform that streamlines test-taking with real-time monitoring, AI-driven insights, and an intuitive user experience. Designed for both learners and educators, it ensures fairness, focus, and efficient performance tracking.",
       img: "SkillX.png",
+      link: "/SkillX",
     },
     {
       title: "ScholarAid",
       description: `A comprehensive support platform that helps students discover and apply for scholarships, grants, and academic opportunities. With intelligent matching and streamlined application tools, it empowers learners to access the resources they need to thrive.`,
       img: "ScholarAid.png",
+      link: "/ScholarAid",
     },
     {
       title: "Reclaimr",
       description:
         "An AI-powered solution that helps individuals and institutions recover unclaimed financial assets with ease. By automating searches and simplifying claims, it ensures users can quickly reconnect with what's rightfully theirs.",
       img: "Reclaimr.png",
+      link: "/Reclaimr",
     },
   ];
 
@@ -49,6 +53,14 @@ const HeroComponent: React.FC = () => {
                     <p className="mt-4 text-lg sm:mt-6 sm:text-xl">
                       {slide.description}
                     </p>
+                    <div className="mt-6">
+                      <Link
+                        href={slide.link}
+                        className="inline-block px-5 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-md hover:bg-opacity-90 transition"
+                      >
+                        Learn More →
+                      </Link>
+                    </div>
                   </div>
 
                   {/* Image Section */}
@@ -64,7 +76,6 @@ const HeroComponent: React.FC = () => {
             ))}
           </Swiper>
 
-          {/* Swiper pagination custom styling (optional positioning tweak) */}
           <style>{`
             .swiper-pagination {
               bottom: -5px !important;

@@ -18,7 +18,7 @@ const cardItems = [
   },
   {
     title: "Reclaimr",
-    description: "Discover hands-on projects to build and grow.",
+    description: "Discover hands-on projects to build and grow with ease.",
     link: "/Reclaimr",
   },
 ];
