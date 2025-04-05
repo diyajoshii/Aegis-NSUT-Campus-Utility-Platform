@@ -221,7 +221,7 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                  Welcome to SkillProve AI
+                  Welcome to Skillx
                 </CardTitle>
                 <CardDescription className="mt-2 text-lg">
                   Your AI-powered skill assessment platform

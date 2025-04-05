@@ -338,7 +338,7 @@ const SkillX = () => {
         startTest={startTest}
         onNavigate={setCurrentSection}
       />
-
+  
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         {currentSection === "profile" ? (
           <ProfilePage
@@ -346,50 +346,58 @@ const SkillX = () => {
             setUserProfile={setUserProfile}
           />
         ) : (
-          <Tabs
-            defaultValue="dashboard"
-            className="space-y-4"
-            onValueChange={setCurrentSection}
-          >
-            <TabsList className="bg-card">
-              <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-              <TabsTrigger value="tests">Available Tests</TabsTrigger>
-              <TabsTrigger value="results">Test Results</TabsTrigger>
-            </TabsList>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSection}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.2 }}
-              >
-                <TabsContent value="dashboard">
-                  <Dashboard token={token} />
-                </TabsContent>
-
-                <TabsContent value="tests">
-                  <AvailableTests
-                    availableTests={availableTests}
-                    startTest={startTest}
-                    openTestDetails={openTestDetails}
-                  />
-                </TabsContent>
-
-                <TabsContent value="results">
-                  <TestResults
-                    testScores={testScores}
-                    selectedTestType={selectedTestType}
-                    setSelectedTestType={setSelectedTestType}
-                    isLoading={isLoading}
-                    error={error}
-                    availableTests={availableTests}
-                  />
-                </TabsContent>
-              </motion.div>
-            </AnimatePresence>
-          </Tabs>
+          <div>
+            <Tabs
+              defaultValue="dashboard"
+              className="space-y-4"
+              onValueChange={setCurrentSection}
+            >
+              <TabsList className="bg-card flex justify-between items-center">
+                <div className="flex space-x-4">
+                  <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
+                  <TabsTrigger value="tests">Available Tests</TabsTrigger>
+                  <TabsTrigger value="results">Test Results</TabsTrigger>
+                </div>
+                {/* Back to Home Button */}
+                <Link href="/" passHref>
+                  <Button className="ml-4">Back to Home</Button>
+                </Link>
+              </TabsList>
+  
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSection}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <TabsContent value="dashboard">
+                    <Dashboard token={token} />
+                  </TabsContent>
+  
+                  <TabsContent value="tests">
+                    <AvailableTests
+                      availableTests={availableTests}
+                      startTest={startTest}
+                      openTestDetails={openTestDetails}
+                    />
+                  </TabsContent>
+  
+                  <TabsContent value="results">
+                    <TestResults
+                      testScores={testScores}
+                      selectedTestType={selectedTestType}
+                      setSelectedTestType={setSelectedTestType}
+                      isLoading={isLoading}
+                      error={error}
+                      availableTests={availableTests}
+                    />
+                  </TabsContent>
+                </motion.div>
+              </AnimatePresence>
+            </Tabs>
+          </div>
         )}
       </main>
       <Footer />
