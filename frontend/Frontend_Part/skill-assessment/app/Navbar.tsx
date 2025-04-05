@@ -53,9 +53,9 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-2 ml-12"> {/* increased from ml-4 to ml-12 */}
   <Link href="/" className="flex items-center space-x-2">
     <span className="font-roboto text-2xl font-bold tracking-wide">
-      <span className="text-primary">Skill</span>
-      <span className="text-blue-500">Prove</span>
-      <span className="text-indigo-500"> AI</span>
+      <span className="text-primary">AEGIS</span>
+      <span className="text-blue-500">-</span>
+      <span className="text-indigo-500">NSUT</span>
     </span>
   </Link>
 </div>

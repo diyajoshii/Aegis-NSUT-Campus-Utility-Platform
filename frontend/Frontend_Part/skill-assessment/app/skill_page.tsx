@@ -330,7 +330,6 @@ const SkillAssessmentInterface = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <ToastContainer />
       <Navbar
         toggleMobileMenu={toggleMobileMenu}
         mobileMenuOpen={mobileMenuOpen}

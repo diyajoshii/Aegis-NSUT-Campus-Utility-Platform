@@ -1,11 +1,10 @@
 import Image from "next/image";
-import SkillPage from "@/app/skill_page";
 import ProtectedRoute from "@/components/ProtectedRoute";
-
+import Main from "./main";
 export default function Home() {
   return (
     <ProtectedRoute>
-      <SkillPage/>
+      <Main />
     </ProtectedRoute>
   );
 }
