@@ -10,8 +10,15 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 interface UserProfile {
   name?: string;
   email?: string;
-  role?: string;
+  branch?: string;
+  section?: number;
+  year?: string;
+  campus?: string;
+  rollNumber?: string;
   avatar?: string;
+  income?: number;
+  location?: string;
+  familySize?: number;
 }
 
 export default function Profile() {
@@ -56,7 +63,7 @@ export default function Profile() {
   const handleProfileUpdate = async (updatedProfile: UserProfile) => {
     try {
       const updated = await updateUserProfile(token, updatedProfile);
-      setUserProfile(updated);
+      setUserProfile(updated); // Ensure this is the updated user object
       toast.success('Profile updated successfully!');
     } catch (error) {
       console.error('Failed to update profile:', error);
