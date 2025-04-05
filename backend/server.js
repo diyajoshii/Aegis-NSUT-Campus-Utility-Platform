@@ -26,10 +26,14 @@ app.use((req, res, next) => {
 // Routes
 const authRoutes = require("./routes/authRoutes");
 const testRoutes = require("./routes/testRoutes");
+const itemsRoute = require('./routes/items');
+const uploadRoute = require('./routes/upload');
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tests", testRoutes);
 app.use('/api/bookmarks', require('./routes/bookmarks'));
+app.use('/api/items', itemsRoute);
+app.use('/api/upload', uploadRoute);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

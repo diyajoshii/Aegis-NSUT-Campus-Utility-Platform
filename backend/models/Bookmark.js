@@ -1,4 +1,4 @@
-//digital-seva-backend\models\Bookmark.js
+//backend\models\Bookmark.js
 
 const mongoose = require('mongoose');
 
