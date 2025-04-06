@@ -29,6 +29,7 @@
     "encoding": "^0.1.13",
     "framer-motion": "^11.11.11",
     "lucide-react": "^0.451.0",
+    "marked": "^15.0.7",
     "marker": "^0.1.2",
     "next": "14.2.15",
     "react": "^18",

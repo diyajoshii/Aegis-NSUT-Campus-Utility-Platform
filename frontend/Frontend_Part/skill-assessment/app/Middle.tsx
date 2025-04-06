@@ -8,17 +8,17 @@ import { ArrowRight } from "lucide-react";
 const cardItems = [
   {
     title: "SkillX",
-    description: "Visualize a secure assessment platform with real-time monitoring. Imagine a streamlined test-taking experience with AI-driven insights.",
+    description: "Experience fair and focused assessments with SkillX's secure platform. Real-time proctoring and test scores for efficient performance tracking and a seamless test-taking experience.",
     link: "/SkillX",
   },
   {
     title: "ScholarAid",
-    description: "Picture a comprehensive platform for discovering scholarships and grants. Envision students easily accessing the resources they need.",
+    description: "Discover your ideal scholarships with ScholarAid. Get personalized recommendations and easily access the resources you need to fund your education.",
     link: "/ScholarAid",
   },
   {
     title: "Reclaimr",
-    description: "See an AI-powered solution simplifying the recovery of unclaimed assets. Imagine individuals and institutions finding their lost items.",
+    description: "Lost something on campus? Reclaimr is your simple college lost and found. Easily report lost items and connect with found objects to get your belongings back quickly.",
     link: "/Reclaimr",
   },
 ];
