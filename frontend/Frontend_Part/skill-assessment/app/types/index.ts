@@ -29,3 +29,8 @@ export interface UserProfile {
   familyIncome?: number;
   isSingleChild?: boolean;
 }
+
+export interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}

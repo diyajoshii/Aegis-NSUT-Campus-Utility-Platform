@@ -5,7 +5,7 @@ import HeroComponent from './Hero';
 import FeatureCards from './Middle';
 import AboutUs from './about/AboutUs';
 import Footer from './Footer';
-
+import Silly from './Sylly/page';
 const Main = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
@@ -21,6 +21,7 @@ const Main = () => {
       />
       <HeroComponent />
       <FeatureCards />
+      <Silly />
       <AboutUs />
       <Footer />
     </div>
