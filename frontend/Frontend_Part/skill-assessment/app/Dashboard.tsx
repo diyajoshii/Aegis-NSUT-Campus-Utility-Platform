@@ -302,7 +302,7 @@ const Dashboard = () => {
           <Card className="overflow-hidden">
             <CardHeader className="pb-4">
               <CardTitle className="text-xl font-semibold">
-                How to Get Maximum Benefit from Our Platform
+                How SkillX works?
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -320,9 +320,9 @@ const Dashboard = () => {
                 <video 
                   className="w-full h-full object-cover"
                   controls
-                  poster="/thumbnail.jpg"
+                  poster="/thumbnail.png"
                 >
-                  <source src="/path-to-your-video.mp4" type="video/mp4" />
+                  <source src="/AegisSkillx.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </motion.div>
