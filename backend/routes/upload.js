@@ -1,40 +1,24 @@
+// routes/upload.js
 const express = require('express');
 const multer = require('multer');
-const mongoose = require('mongoose');
-const Grid = require('gridfs-stream');
+const path = require('path');
 const router = express.Router();
-const { MongoClient } = require('mongodb');
-const uri = process.env.MONGO_URI;
 
-const storage = multer.memoryStorage();
+// Set up storage engine
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/'); // Directory to save images
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname)); // Append timestamp to filename
+  },
+});
+
 const upload = multer({ storage });
 
-let gfs;
-
-MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(client => {
-    const db = client.db();
-    gfs = Grid(db, mongoose.mongo);
-  })
-  .catch(err => console.error(err));
-
+// Upload Image
 router.post('/', upload.single('file'), (req, res) => {
-  console.log('File received:', req.file); 
-  const writestream = gfs.createWriteStream({
-    filename: req.file.originalname,
-    contentType: req.file.mimetype,
-  });
-
-  writestream.on('close', (file) => {
-    res.json({ url: `/api/files/${file._id}` }); // Ensure this URL is correct
-  });
-
-  writestream.on('error', (error) => {
-    res.status(500).json({ error: error.message });
-  });
-
-  writestream.write(req.file.buffer);
-  writestream.end();
+  res.json({ url: `/uploads/${req.file.filename}` }); // Return the local file URL
 });
 
 module.exports = router;

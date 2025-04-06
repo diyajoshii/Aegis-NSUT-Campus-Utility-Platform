@@ -16,6 +16,7 @@ app.use(cors({
 
 // Middleware
 app.use(bodyParser.json());
+app.use('/uploads', express.static('uploads')); // Serve static files from uploads directory
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -33,7 +34,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/tests", testRoutes);
 app.use('/api/bookmarks', require('./routes/bookmarks'));
 app.use('/api/items', itemsRoute);
-app.use('/api/upload', uploadRoute);
+app.use('/api/upload', uploadRoute); // Add the upload route
 
 // Error handling middleware
 app.use((err, req, res, next) => {

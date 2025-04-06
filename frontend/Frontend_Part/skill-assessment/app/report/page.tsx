@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button"; // Assuming you have a Button component
-import { Input } from "@/components/ui/input"; // Assuming you have an Input component
-import ItemCard from "../components/ItemCard"; // Import the ItemCard component
+import { Button } from "@/components/ui/button"; 
+import { Input } from "@/components/ui/input"; 
+import ItemCard from "../components/ItemCard"; 
 
 const ReportPage: React.FC = () => {
   const [type, setType] = useState<"lost" | "found">("lost");
@@ -12,7 +12,7 @@ const ReportPage: React.FC = () => {
   const [location, setLocation] = useState("");
   const [contact, setContact] = useState("");
   const [image, setImage] = useState<File | null>(null);
-  const [items, setItems] = useState<any[]>([]); // Replace with your item type
+  const [items, setItems] = useState<any[]>([]); 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,79 +49,84 @@ const ReportPage: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">Report Lost/Found Item</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <h1 className="text-3xl font-bold mb-6 text-center">Report Lost/Found Item</h1>
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block text-sm font-medium">Type</label>
+          <label className="block text-sm font-medium mb-1">Type</label>
           <select
             value={type}
             onChange={(e) => setType(e.target.value as "lost" | "found")}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 p-2"
           >
             <option value="lost">Lost</option>
             <option value="found">Found</option>
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium">Title</label>
+          <label className="block text-sm font-medium mb-1">Title</label>
           <Input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
+            className="p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Description</label>
+          <label className="block text-sm font-medium mb-1">Description</label>
           <Input
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            className="p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Category</label>
+          <label className="block text-sm font-medium mb-1">Category</label>
           <Input
             type="text"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
+            className="p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Location</label>
+          <label className="block text-sm font-medium mb-1">Location</label>
           <Input
             type="text"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             required
+            className="p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Contact (Email/Phone)</label>
+          <label className="block text-sm font-medium mb-1">Contact (Email/Phone)</label>
           <Input
             type="text"
             value={contact}
             onChange={(e) => setContact(e.target.value)}
             required
+            className="p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Image</label>
+          <label className="block text-sm font-medium mb-1">Image</label>
           <input
             type="file"
             onChange={(e) => setImage(e.target.files?.[0] || null)}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 p-2"
           />
         </div>
-        <Button type="submit" className="w-full bg-blue-600 text-white hover:bg-blue-700">
+        <Button type="submit" className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-md p-2">
           Submit
         </Button>
       </form>
 
-      <h2 className="text-xl font-bold mt-8">Reported Items</h2>
-      <div className="grid grid-cols-1 gap-4 mt-4">
+      <h2 className="text-2xl font-bold mt-8">Reported Items</h2>
+      <div className="grid grid-cols-1 gap-6 mt-4">
         {items.map((item, index) => (
           <ItemCard key={index} item={item} />
         ))}

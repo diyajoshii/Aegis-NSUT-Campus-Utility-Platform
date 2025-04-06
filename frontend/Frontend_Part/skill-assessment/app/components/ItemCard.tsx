@@ -12,10 +12,10 @@ interface Item {
   title: string;
   description: string;
   category: string;
-  status: "lost" | "found" | "claimed";
+  status: "lost" | "found" | "claimed"; // Ensure this is the correct type
   location: string;
   contact: string;
-  image: string;
+  image: string; // Ensure this is the correct type
   comments: Comment[];
 }
 
@@ -36,13 +36,20 @@ const ItemCard: React.FC<{ item: Item }> = ({ item }) => {
   };
 
   return (
-    <Card className="border rounded-lg p-4 shadow-sm">
-      <CardHeader>
+    <Card className="border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+      <CardHeader className="flex justify-between items-center">
         <CardTitle className="text-lg font-semibold">{item.title}</CardTitle>
+        {/* Status Tag */}
+        <span className={`inline-block px-2 py-1 text-xs font-bold text-white rounded-full ${item.status === 'lost' ? 'bg-red-500' : 'bg-green-500'}`}>
+          {item.status.charAt(0).toUpperCase() + item.status.slice(1)} {/* Capitalize the first letter */}
+        </span>
       </CardHeader>
       <CardContent>
-        <img src={item.image} alt={item.title} className="w-full h-auto rounded-md mb-2" />
-        <p>{item.description}</p>
+        {/* Display the image with the correct URL */}
+        {item.image && (
+          <img src={`http://localhost:5000${item.image}`} alt={item.title} className="w-full h-auto rounded-md mb-2" />
+        )}
+        <p className="text-gray-700">{item.description}</p>
         <span className="text-sm text-gray-600">{item.category}</span>
         <p className="text-sm">Location: {item.location}</p>
         <p className="text-sm">Contact: {item.contact}</p>
@@ -56,7 +63,7 @@ const ItemCard: React.FC<{ item: Item }> = ({ item }) => {
             placeholder="Add a comment..."
             className="border rounded-md p-2 w-full"
           />
-          <button type="submit" className="mt-2 bg-blue-600 text-white rounded-md p-2">
+          <button type="submit" className="mt-2 bg-blue-600 text-white rounded-md p-2 hover:bg-blue-700">
             Submit
           </button>
         </form>
