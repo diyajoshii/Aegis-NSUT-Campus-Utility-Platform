@@ -19,13 +19,14 @@ MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.error(err));
 
 router.post('/', upload.single('file'), (req, res) => {
+  console.log('File received:', req.file); 
   const writestream = gfs.createWriteStream({
     filename: req.file.originalname,
     contentType: req.file.mimetype,
   });
 
   writestream.on('close', (file) => {
-    res.json({ url: `/api/files/${file._id}` });
+    res.json({ url: `/api/files/${file._id}` }); // Ensure this URL is correct
   });
 
   writestream.on('error', (error) => {
